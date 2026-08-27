@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>钱兔子 · 帮实体老板把生意跑通 | 武汉老何</title>
+<meta name="description" content="钱兔无量信息咨询中心 · 武汉老何团队。退役军人出身的实战派商业顾问，用AI落地与自媒体获客，帮实体老板理顺获客、经营与现金流。">
+<style>
+:root{
+  --bg:#0f1115; --bg2:#161a21; --card:#1c212b; --border:rgba(255,255,255,.08);
+  --text:#EDEFF2; --text2:#9aa0aa; --text3:#6b7280; --accent:#D85A30; --accent-d:#b8481f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(15,17,21,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-size:19px;font-weight:700;color:var(--text);letter-spacing:.5px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;font-size:14px;color:var(--text2)}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;white-space:nowrap}
+/* hero */
+.hero{padding:92px 0 76px;text-align:center;background:var(--bg2)}
+.badge{display:inline-block;background:var(--card);color:var(--accent);font-size:12px;padding:6px 15px;border-radius:20px;margin-bottom:22px;border:1px solid rgba(216,90,48,.3)}
+.hero h1{font-size:40px;line-height:1.35;font-weight:700;margin:0 0 18px;letter-spacing:1px}
+.hero p{color:var(--text2);font-size:15px;line-height:1.8;margin:0 auto 32px;max-width:520px}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#fff;padding:13px 28px;border-radius:8px;font-size:14px;font-weight:600}
+.btn-primary:hover{background:var(--accent-d)}
+.btn-ghost{border:1px solid rgba(255,255,255,.2);color:var(--text);padding:13px 28px;border-radius:8px;font-size:14px}
+.btn-ghost:hover{border-color:var(--text2)}
+/* section base */
+section{padding:72px 0}
+.section-label{font-size:12px;color:var(--accent);letter-spacing:3px;margin-bottom:8px}
+.section-title{font-size:26px;font-weight:700;margin:0 0 36px;color:var(--text)}
+/* about */
+.about{background:var(--bg)}
+.about-grid{display:flex;gap:32px;align-items:center}
+.avatar-img{width:200px;height:240px;object-fit:cover;border-radius:12px;flex:none;display:block;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.about-text{color:var(--text2);font-size:15px;line-height:1.9}
+.about-text strong{color:var(--text);font-weight:600}
+/* pain */
+.pain{background:var(--bg2)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pain-card{background:var(--card);padding:28px 22px;border-radius:14px;border:1px solid var(--border);text-align:center}
+.pain-icon{width:44px;height:44px;border-radius:50%;background:var(--accent);margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
+.pain-icon::after{content:"";width:16px;height:16px;border-radius:50%;background:#fff;opacity:.9}
+.pain-card h3{font-size:17px;color:var(--text);margin-bottom:10px;font-weight:600}
+.pain-card p{color:var(--text3);font-size:13px;line-height:1.7}
+/* method */
+.method{background:var(--bg)}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+.method-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column}
+.method-num{color:var(--accent);font-size:30px;font-weight:800;line-height:1;margin-bottom:12px;letter-spacing:-1px}
+.method-num small{font-size:12px;color:var(--text3);font-weight:600;margin-left:5px;letter-spacing:0}
+.method-card h3{font-size:16px;color:var(--text);margin-bottom:8px;font-weight:600}
+.method-card p{color:var(--text3);font-size:13px;line-height:1.7}
+.method-card .tag{display:inline-block;margin-top:10px;font-size:11px;color:var(--accent);border:1px solid rgba(216,90,48,.35);padding:3px 10px;border-radius:11px;align-self:flex-start}
+/* products */
+.products{background:var(--bg)}
+.ladder-wrap{text-align:center;max-width:920px;margin:0 auto}
+.price-ladder{max-width:100%;height:auto;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.55);border:1px solid var(--border);margin:0 auto;display:block}
+.ladder-caption{color:var(--text2);font-size:14px;margin-top:24px;line-height:1.8}
+/* cases */
+.cases{background:var(--bg2)}
+.case-placeholder{background:var(--card);border:1px dashed rgba(255,255,255,.18);border-radius:14px;padding:40px;text-align:center;color:var(--text3);font-size:14px;line-height:1.9}
+/* contact */
+.contact{background:var(--bg);text-align:center}
+.contact-inner{display:flex;gap:32px;align-items:center;justify-content:center;flex-wrap:wrap}
+.qr{width:160px;height:160px;background:#fff;border-radius:14px;padding:10px;object-fit:contain}
+.contact-text{text-align:left;max-width:320px}
+.contact-text h3{font-size:18px;color:var(--text);margin-bottom:10px}
+.contact-text p{color:var(--text2);font-size:14px;line-height:1.8}
+.contact-text .btn-primary{display:inline-block;margin-top:18px}
+/* footer */
+.footer{padding:36px 0;text-align:center;color:var(--text3);font-size:13px;border-top:1px solid var(--border);background:var(--bg2);line-height:1.9}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero h1{font-size:30px}
+  .about-grid{flex-direction:column;text-align:center}
+  .pain-grid{grid-template-columns:1fr}
+  .method-grid{grid-template-columns:1fr}
+  .section-title{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">钱兔子<span>.</span></div>
+    <div class="nav-links">
+      <a href="#about">关于</a>
+      <a href="#products">产品</a>
+      <a href="#cases">案例</a>
+      <a href="#contact">联系</a>
+    </div>
+    <a class="nav-cta" href="#contact">联系老何</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge">武汉本地 · 只做能落地的生意</div>
+    <h1>帮实体老板<br>少踩坑，把生意跑通</h1>
+    <p>退役军人 × 创业实战13年<br>AI落地应用 + 自媒体获客 + 现金流规划陪跑</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#products">看产品阶梯</a>
+      <a class="btn-ghost" href="#cases">看真实案例</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="section-label">ABOUT</div>
+    <h2 class="section-title">我是谁</h2>
+    <div class="about-grid">
+      <img class="avatar-img" src="assets/he-junmao.jpg" alt="何俊茂 · 武汉老何">
+      <div class="about-text">
+        16岁入伍北京武警服役5年；外企5年，自主创业13年。从最早做实体，到做服务做咨询，高峰低谷都经历过。<br><br>
+        <strong>不吹牛、不画饼</strong>，只帮老板把<strong>获客、经营、现金流</strong>这三件事理顺。信一条：看准了就干，边干边调——所有计划都是在执行中磨出来的。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="wrap">
+    <h2 class="section-title" style="text-align:center">老板的三大痛点，我帮你拆</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon"></div>
+        <h3>获客难</h3>
+        <p>流量贵、转化低，公域拉不来人，投了钱没声响。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"></div>
+        <h3>思路乱</h3>
+        <p>想转型没方向，AI不会用，听着都好就是落不了地。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"></div>
+        <h3>现金流缺</h3>
+        <p>账上没钱、规划全凭感觉，一有风吹草动就慌。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="section-label">METHOD</div>
+    <h2 class="section-title">怎么帮你？—— 6 个 1 共建模式</h2>
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-num">1<small>Pcs</small></div>
+        <h3>创业陪跑加速器</h3>
+        <p>陪跑创业全程，帮你跑通商业模式、加速成长落地。</p>
+      </div>
+      <div class="method-card">
+        <div class="method-num">1<small>Strip</small></div>
+        <h3>资源链接</h3>
+        <p>链接科技、市场、人才、资本等关键要素，资源脉络一路打通。</p>
+      </div>
+      <div class="method-card">
+        <div class="method-num">1<small>Pcs</small></div>
+        <h3>利益共同体</h3>
+        <p>一盯一陪成长方案，深度陪跑、共同成长、收益共享。</p>
+        <span class="tag">适用 2980 / 9800 陪跑</span>
+      </div>
+      <div class="method-card">
+        <div class="method-num">1<small>Pcs</small></div>
+        <h3>全周期企服平台</h3>
+        <p>人力、财务、法务、金融等企服一站配齐，跟上各阶段发展需求。</p>
+      </div>
+      <div class="method-card">
+        <div class="method-num">1<small>Set</small></div>
+        <h3>新媒体赋能</h3>
+        <p>全链路线上获客支持，帮你把产品与服务变成现金流。</p>
+      </div>
+      <div class="method-card">
+        <div class="method-num">1<small>Sheet</small></div>
+        <h3>私域社群网</h3>
+        <p>千企矩阵加社群运营，搭起你自己的私域闭环生态。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="wrap">
+    <div class="section-label">PRODUCTS</div>
+    <h2 class="section-title">四档陪跑，按需选</h2>
+    <div class="ladder-wrap">
+      <img class="price-ladder" src="assets/price-ladder.png" alt="钱兔子价格阶梯：99 / 499 / 2980 / 9800">
+      <p class="ladder-caption">从 99 元社群入门，到 9800 元年度旗舰深度陪跑 ——<br>主推「2980 主力陪跑营」。</p>
+    </div>
+  </div>
+</section>
+
+<section id="cases" class="cases">
+  <div class="wrap">
+    <div class="section-label">CASES</div>
+    <h2 class="section-title">真实案例</h2>
+    <div class="case-placeholder">
+      真实案例 · 用变化说话<br>
+      不编不夸。每一篇都来自真实服务过的老板，写"变化"不写"赚多少"，数据脱敏后呈现。<br>
+      <span style="color:var(--text2)">案例正在筹备，先留位。</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-label">CONTACT</div>
+    <h2 class="section-title">先聊聊？</h2>
+    <div class="contact-inner">
+      <img class="qr" src="assets/gzh-qr.jpg" alt="钱兔子公众号二维码">
+      <div class="contact-text">
+        <h3>关注「钱兔子」公众号</h3>
+        <p>扫一扫或搜公众号「钱兔子」，看每日实战拆解、案例复盘与工具分享。<br>想深入聊你的生意，公众号后台留言，我来找你。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  钱兔无量信息咨询中心 · 武汉老何团队<br>
+  © 2026 保留所有权利
+</footer>
+
+</body>
+</html>
